@@ -9,11 +9,11 @@ import { LoginComponent } from './components/login/login.component';
 const routes: Routes = [
 
   { path: '', component:TelaInicialComponent },
-  { path: 'logim', component:LoginComponent },
+  { path: 'login', component:LoginComponent },
   { path: 'tela2', component:TelaSecundariaComponent },
   { path: 'tela3', component:TelaTerceareaComponent },
   { path: 'tela4', component:TelaQuartenareaComponent },
-  { path: '**', redirectTo: '' }
+  //{ path: '**', redirectTo: '' }
 
 ];
 
