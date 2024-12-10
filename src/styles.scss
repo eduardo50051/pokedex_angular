@@ -5,6 +5,8 @@
     box-sizing: border-box;
   }
   
+
+
 body{
     margin: 0;
 }
@@ -45,4 +47,20 @@ footer {
 main {
     flex: 1; 
     padding: 20px;
+}
+
+
+.botao_sair{
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+
+}
+
+.botao_sair p{
+    
+    color: black !important;
+    font-size: 15px !important;
+
 }

@@ -1,0 +1,100 @@
+.conteudo_tela{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background: green;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+p{
+    color: black;
+    font-size: 20px;
+}
+
+
+
+form {
+    width: 300px;  
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+.container_login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  div {
+    margin-bottom: 15px;
+  }
+  
+  
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+ 
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+  }
+  
+
+  input:focus {
+    border-color: #666;
+    outline: none;
+  }
+  
+
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+ 
+  @media (max-width: 480px) {
+    form {
+      padding: 15px;
+    }
+  
+    input,
+    button {
+      font-size: 14px;
+    }
+  }
+  

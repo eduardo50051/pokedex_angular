@@ -1,4 +1,35 @@
-<h1>
-    ola 
+<div class="container_login">
+   
     
-</h1>
+    <form>
+     
+        <div>
+      
+              <p>Usuário:</p>
+     
+        
+             <input id="usuario" type="text" [(ngModel)]="usuario" name="usuario" required />
+     
+     
+        </div>
+   
+      <div>
+       
+        <p>Senha:</p>
+     
+        <input id="senha" type="password" [(ngModel)]="senha" name="senha" required />
+     
+    
+    </div>
+   
+   
+      <div>
+        <button type="button" (click)="Entrar()">Login</button>
+      </div>
+  
+  
+    </form>
+ 
+
+</div>
+  

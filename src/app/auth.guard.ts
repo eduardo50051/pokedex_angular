@@ -1,5 +1,25 @@
-import { CanActivateFn } from '@angular/router';
+import { CanActivateFn, Router } from '@angular/router';
+
 
 export const authGuard: CanActivateFn = (route, state) => {
-  return true;
+  
+  const router = new Router();
+
+  const Logado = localStorage.getItem('estalogado'); 
+
+ 
+  if (Logado) {
+ 
+    return true; 
+
+  }
+  
+  
+  alert(' voce nao esta logado ');
+ 
+  router.navigate(['/login']);
+  
+  return false; 
+
+
 };

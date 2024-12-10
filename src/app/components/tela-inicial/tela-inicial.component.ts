@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tela-inicial',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./tela-inicial.component.scss']
 })
 export class TelaInicialComponent {
+
+  constructor(private router: Router) {}
+
+  Sair() {
+    localStorage.removeItem('estalogado');
+    this.router.navigate(['/login']);
+  }
 
 }
