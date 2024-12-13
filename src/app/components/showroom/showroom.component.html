@@ -64,14 +64,26 @@
               
                 <img *ngIf="!mostrarShine" [src]="DetalhesPokemon.sprites.other.showdown.front_default" alt="{{ DetalhesPokemon.name }}">
               
-         <div class="passadores_pokemons">
+  
+
+
+                <div class="passadores_pokemons">
                 
-            <div (click)="botaoShineMostrar()" class="passador_unidade type-shine">
-                    <p>Ver Shiny</p>
-                  </div>
-                 
-               
-                </div>
+                    <div (click)="botaoShineMostrar()" class="passador_unidade type-shine">
+                            <p>Ver Shiny</p>
+                          </div>
+                         
+                       
+                        </div>
+
+  
+<div class="texto_desc_pokemons">
+<p>
+    {{ getDescricaoEmIngles() }}
+</p>
+</div>
+
+  
               
             
             </div>

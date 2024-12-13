@@ -28,10 +28,10 @@
             <ul>
                
                
-                <li *ngFor="let pokemon of pokemons">
-                  <a [routerLink]="['/details', extractPokemonId(pokemon.url)]">
-                    {{ pokemon.name }}
-                  </a>
+                <li (click)="navegarParaDetalhes(pokemon.url)" *ngFor="let pokemon of pokemons">
+                    <span class="pokemon-link">
+                      {{ pokemon.name }}
+                    </span>
                 </li>
               
             

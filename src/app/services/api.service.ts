@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   private baseUrl = 'https://pokeapi.co/api/v2/pokemon';
+  private Apidescricao = 'https://pokeapi.co/api/v2/pokemon-species';
 
   constructor(private http: HttpClient) {}
 
@@ -28,5 +29,11 @@ export class ApiService {
     }
   
 
+    getPokemonDescriçaos(id: string): Observable<any> {
+      return this.http.get(`${this.Apidescricao}/${id}`);
+    }
+
 
 }
+
+

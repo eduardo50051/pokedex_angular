@@ -34,6 +34,12 @@ export class TelaInicialComponent implements OnInit {
   }
 
 
+  navegarParaDetalhes(url: string): void {
+    const pokemonId = this.extractPokemonId(url);
+    this.router.navigate(['/details', pokemonId]);
+  }
+
+
   extractPokemonId(url: string): string {
     const parts = url.split('/').filter(Boolean);
     return parts[parts.length - 1]; 
