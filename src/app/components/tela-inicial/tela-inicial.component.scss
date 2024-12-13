@@ -1,11 +1,129 @@
 .conteudo_tela{
-    height: 500px;
-    display: flex;
-    align-items: center;
+    height: auto;
+    padding: 0px 200px;
     background: green;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+}
+
+.topo_home{
+    padding-top: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.lista_geraçao ul{
+    overflow-y: scroll;
+    height: 60vh;
+    margin-bottom: 30px;
+}
+
+.lista_geraçao {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.lista_geraçao h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #d32f2f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.lista_geraçao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista_geraçao li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(to right, #d32f2f, #f44336);
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s, box-shadow 0.2s;
+        width: 95%;
+        cursor: pointer;
+        text-transform: capitalize;
+}
+
+.lista_geraçao li:hover {
+    
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.lista_geraçao li::before {
+    content: "⚡";
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.lista_geraçao li::after {
+    content: "➡";
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+
+.lista_geraçao ul {
+    overflow-y: scroll;
+    height: 60vh;
+    margin-bottom: 30px;
+    scrollbar-width: thin; 
+    scrollbar-color: #ff6313 #f0f0f0; 
+}
+
+
+.lista_geraçao ul::-webkit-scrollbar {
+    width: 8px; 
+    background-color: #f0f0f0; 
+}
+
+.lista_geraçao ul::-webkit-scrollbar-thumb {
+    background-color: #ff6313; 
+    border-radius: 10px; 
+    border: 2px solid #f0f0f0; 
+}
+
+.lista_geraçao ul::-webkit-scrollbar-thumb:hover {
+    background-color: #e65b0d; 
+}
+
+.lista_geraçao ul::-webkit-scrollbar-track {
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
+}
+
+
+
+.lista_geraçao{
+    width: 45%;
+}
+
+.imagem_poke{
+    width: 45%;
+}
+
+.conteudo_home_box{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
 }
 
 p{

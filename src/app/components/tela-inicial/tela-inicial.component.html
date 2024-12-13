@@ -1,11 +1,55 @@
 <div class="conteudo_tela">
-<p>
-    tela-inicial
-</p>
-<div class="botao_sair" (click)="Sair()">
-    <p>
-    Sair
 
-</p>
+
+    <div class="topo_home">
+        
+        <p>
+            tela-inicial
+        </p>
+
+        <div class="botao_sair" (click)="Sair()">
+            <p>
+                 Sair
+            </p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+  
+  <div class="conteudo_home_box">
+    
+        <div class="lista_geraçao">
+            <h2>Lista de Pokémon</h2>
+            <ul>
+            
+                
+                <li *ngFor="let pokemon of pokemons">
+                    {{ pokemon.name }}
+                </li>
+            
+            
+        
+            </ul>
+        </div>
+
+
+
+        <div class="imagem_poke">
+          <div class="imagem_poke_box"> 
+
+          </div>
+        </div>
+
+
+
 </div>
+  
+ 
+  
+
 </div>

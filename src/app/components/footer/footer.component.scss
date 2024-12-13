@@ -4,8 +4,13 @@ footer{
     width: 100%;
 }
 
-a{
-    color: black;
+.footer a {
+    color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffcccb;
 }

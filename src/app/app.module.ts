@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,7 @@ import { TelaSecundariaComponent } from './components/tela-secundaria/tela-secun
 import { TelaTerceareaComponent } from './components/tela-tercearea/tela-tercearea.component';
 import { TelaQuartenareaComponent } from './components/tela-quartenarea/tela-quartenarea.component';
 import { LoginComponent } from './components/login/login.component';
+import { ShowroomComponent } from './components/showroom/showroom.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,14 @@ import { LoginComponent } from './components/login/login.component';
     TelaSecundariaComponent,
     TelaTerceareaComponent,
     TelaQuartenareaComponent,
-    LoginComponent
+    LoginComponent,
+    ShowroomComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

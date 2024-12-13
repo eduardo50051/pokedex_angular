@@ -6,16 +6,21 @@ import { TelaTerceareaComponent } from './components/tela-tercearea/tela-tercear
 import { TelaQuartenareaComponent } from './components/tela-quartenarea/tela-quartenarea.component';
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './auth.guard';
+import { ShowroomComponent } from './components/showroom/showroom.component';
 
 const routes: Routes = [
 
-  { path: '', component:LoginComponent },
+  { path: '', component:LoginComponent, data: { header_footer: false }  },
   { path: 'login', component:LoginComponent, data: { header_footer: false } },
   { path: 'home', component:TelaInicialComponent, canActivate: [authGuard] },
   { path: 'tela2', component:TelaSecundariaComponent, canActivate: [authGuard] },
   { path: 'tela3', component:TelaTerceareaComponent, canActivate: [authGuard] },
   { path: 'tela4', component:TelaQuartenareaComponent, canActivate: [authGuard] },
+  { path: 'details/:id', component:ShowroomComponent, canActivate: [authGuard] },
   { path: '**', redirectTo: 'login' },
+  
+  
+  
 
 
 ];
