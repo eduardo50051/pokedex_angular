@@ -1,7 +1,7 @@
 .conteudo_tela{
     height: auto;
     padding: 0px 200px;
-    background: green;
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBlEYgchhKug4E8sZsBiourU61Sp98nhU1HnpyUbY1lLG1dS9gRHB67wIxgL6sIJSDmnQ236Q66ZENXDMoCiPdcXKtuA0i1O3DJcAOeW8u28zapnL2hgrilkKLZc9FPKZgppq9Pvs7vKs/s1600/indigo.png);
     justify-content: center;
     flex-direction: column;
     gap: 20px;
@@ -61,6 +61,19 @@
         width: 95%;
         cursor: pointer;
         text-transform: capitalize;
+}
+
+.lista_geraçao a {
+
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+   text-decoration: none;
+   
+ 
+   
+   
+    text-transform: capitalize;
 }
 
 .lista_geraçao li:hover {

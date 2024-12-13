@@ -1,13 +1,94 @@
+
+  
+
+
 <div class="content_showroom_ajuste">
 
-<div class="container_detalhes">
+  
+    <div class="container_detalhes">
+  
+      <div class="pokemon-card">
+  
+       
+        <div class="pokemon-image">
+          <img [src]="DetalhesPokemon.sprites.front_default" alt="{{ DetalhesPokemon.name }}">
+        </div>
+  
+        <div class="pokenumber">
+            <p>
+              #{{ formatPokemonId(DetalhesPokemon.id) }}
+            </p>
+          </div>
 
-<p>
-    teste
-</p>
+        <div class="pokemon-details">
+          <h1 class="pokemon-name">{{ DetalhesPokemon.name | titlecase }}</h1>
+  
+         
+          <div class="pokemon-types">
+            <span *ngFor="let tipo of DetalhesPokemon.types" class="pokemon-type" [class]="'type-' + tipo.type.name">
+              {{ tipo.type.name | titlecase }}
+            </span>
+          </div>
+        </div>
+  
+      </div>
+  
+      
+      <div class="pokemon-details_box">
+      
+        <div class="box_details_texto">
+      
+                <h2 class="details-title">Detalhes</h2>
+        
+            
+                <div class="details-info">
+                <p><strong>Peso:</strong> {{ DetalhesPokemon.weight / 10 }} kg</p>
+                <p><strong>Altura:</strong> {{ DetalhesPokemon.height / 10 }} m</p>
+                </div>
+        
+            
+                <div class="details-stats">
+                <h3>Status Base</h3>
+                <ul>
+                    <li *ngFor="let stat of DetalhesPokemon.stats">
+                    <strong>{{ stat.stat.name | titlecase }}:</strong> {{ stat.base_stat }}
+                    </li>
+                </ul>
+                </div>
+            
+            </div>
+    
+            <div class="div_details_imagem">
+               
+                <img *ngIf="mostrarShine" [src]="DetalhesPokemon.sprites.other.showdown.front_shiny" alt="{{ DetalhesPokemon.name }}">
+              
+                <img *ngIf="!mostrarShine" [src]="DetalhesPokemon.sprites.other.showdown.front_default" alt="{{ DetalhesPokemon.name }}">
+              
+         <div class="passadores_pokemons">
+                
+            <div (click)="botaoShineMostrar()" class="passador_unidade type-shine">
+                    <p>Ver Shiny</p>
+                  </div>
+                 
+               
+                </div>
+              
+            
+            </div>
+              
+    
 
 
-</div>
+
+    
+    
+    </div>
+  
+    </div>
+  </div>
 
 
-</div>
+
+
+
+  

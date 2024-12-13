@@ -13,7 +13,7 @@ export class TelaInicialComponent implements OnInit {
   constructor(private router: Router, private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.loadPokemons();
+    this.carregarPokemons();
   }
 
   Sair(): void {
@@ -21,23 +21,21 @@ export class TelaInicialComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  loadPokemons(): void {
-   
-   
+  carregarPokemons(): void {
     this.apiService.getPokemonsgeral(0, 151).subscribe(
-    
-    
       (response) => {
         this.pokemons = response.results; 
         console.log(this.pokemons); 
       },
-    
-    
       (error) => {
         console.error('Erro ao carregar Pokémon:', error); 
       }
     );
-  
-  
+  }
+
+
+  extractPokemonId(url: string): string {
+    const parts = url.split('/').filter(Boolean);
+    return parts[parts.length - 1]; 
   }
 }

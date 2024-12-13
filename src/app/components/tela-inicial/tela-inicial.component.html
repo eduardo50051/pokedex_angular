@@ -26,17 +26,21 @@
         <div class="lista_geraçao">
             <h2>Lista de Pokémon</h2>
             <ul>
-            
-                
+               
+               
                 <li *ngFor="let pokemon of pokemons">
+                  <a [routerLink]="['/details', extractPokemonId(pokemon.url)]">
                     {{ pokemon.name }}
+                  </a>
                 </li>
+              
             
-            
-        
             </ul>
         </div>
 
+
+       
+          
 
 
         <div class="imagem_poke">

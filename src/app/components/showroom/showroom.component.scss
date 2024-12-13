@@ -1,0 +1,307 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+
+
+
+
+
+.passadores_paginas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 10px;
+    background-color: blue;
+    border-radius: 8px;
+    
+  }
+  
+  .passadores_paginas div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #dcdcdc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .passadores_paginas div:hover {
+    background-color: #bbb;
+  }
+  
+  .passadores_paginas p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+.content_showroom_ajuste {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+     background-image: url(https://novapost.com.br/wp-content/uploads/2022/02/pokemon-scarlet-violet-nova-post-1.jpg);
+     background-size: contain;
+  }
+  
+  .container_detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+
+
+  .pokenumber p{
+    font-size: 13px;
+    font-weight: 800;
+    color: #b4acb5;
+  }
+  
+ 
+  
+  .pokemon-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .pokemon-type {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .type-grass {
+    background-color: #78c850;
+  }
+  
+  .type-poison {
+    background-color: #a040a0;
+  }
+  
+.div_details_imagem{
+    width: 70%;
+}
+
+.box_details_texto{
+    width: 40%;
+}
+
+.div_details_imagem{
+display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+ 
+.passador_unidade{
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    
+}
+
+.passadores_pokemons{
+display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.pokemon-details_box {
+    flex: 1;
+    min-width: 300px;
+    padding: 45px;
+    background-image: url(data:image/jpeg;base64,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);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .details-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 15px;
+  }
+  
+  .details-info {
+    font-size: 16px;
+    color: #FFF;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .details-stats {
+    margin-top: 20px;
+  }
+  
+  .details-stats h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 10px;
+  }
+  
+  .details-stats ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .details-stats li {
+    font-size: 16px;
+    color: #FFF;
+    margin-bottom: 5px;
+  }
+  
+  .details-stats li strong {
+    color: #FFF;
+  }
+  
+
+
+.container_detalhes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pokemon-card {
+    background: linear-gradient(135deg, #4e73df, #2e59d9); 
+    border-radius: 10px;
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+.pokemon-image {
+    
+  
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-image img {
+    max-width: 100px;
+    height: auto;
+}
+
+.pokemon-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.pokemon-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pokemon-type {
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+
+.type-shine {background-color: #F08030;}
+.type-male {background-color: #1e90ff; }
+.type-female {background-color: #ff69b4; }
+.type-shine { background-color: #F08030; }
+.type-fire { background-color: #F08030; }
+.type-water { background-color: #6890F0; }
+.type-grass { background-color: #78C850; }
+.type-electric { background-color: #F8D030; }
+.type-psychic { background-color: #F85888; }
+.type-ice { background-color: #98D8D8; }
+.type-dragon { background-color: #7038F8; }
+.type-dark { background-color: #705848; }
+.type-fairy { background-color: #EE99AC; }
+.type-normal { background-color: #A8A878; }
+.type-fighting { background-color: #C03028; }
+.type-flying { background-color: #A890F0; }
+.type-poison { background-color: #A040A0; }
+.type-ground { background-color: #E0C068; }
+.type-rock { background-color: #B8A038; }
+.type-bug { background-color: #A8B820; }
+.type-ghost { background-color: #705898; }
+.type-steel { background-color: #B8B8D0; }
+
+
+
