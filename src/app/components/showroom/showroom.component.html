@@ -1,17 +1,43 @@
 
-  
+<div class="passador">
 
+
+
+  <button (click)="navegarAnterior()" [disabled]="id <= 1">Anterior</button>
+  <button (click)="navegarProximo()" [disabled]="id >= 1025">Próximo</button>
+
+
+</div>
 
 <div class="content_showroom_ajuste">
+  
+  <div class="botao_voltar_showroom" routerLink="/home">
+    Voltar
+ </div>
+
+   
 
   
     <div class="container_detalhes">
   
+
+
+
       <div class="pokemon-card">
   
-       
+
+
         <div class="pokemon-image">
+       
+       <!--
+       
           <img [src]="DetalhesPokemon.sprites.front_default" alt="{{ DetalhesPokemon.name }}">
+       
+       --->
+       
+
+       <img [src]="DetalhesPokemon.sprites.other.home.front_default" alt="{{ DetalhesPokemon.name }}">
+
         </div>
   
         <div class="pokenumber">
@@ -59,11 +85,15 @@
             </div>
     
             <div class="div_details_imagem">
-               
+            
+              <div class="imagem_poke_animada_box">
+
                 <img *ngIf="mostrarShine" [src]="DetalhesPokemon.sprites.other.showdown.front_shiny" alt="{{ DetalhesPokemon.name }}">
               
                 <img *ngIf="!mostrarShine" [src]="DetalhesPokemon.sprites.other.showdown.front_default" alt="{{ DetalhesPokemon.name }}">
               
+              </div>
+
   
 
 

@@ -11,6 +11,8 @@ export class ShowroomComponent implements OnInit {
   DetalhesPokemon: any;
   descricaoPokemon: any;
   mostrarShine: boolean = false;
+  id!: number;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -22,6 +24,24 @@ export class ShowroomComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.carregarDetalhesPokemon(id);
+    }
+
+
+    this.route.params.subscribe(params => {
+      this.id = +params['id']; 
+    });
+  }
+
+
+  navegarAnterior(): void {
+    if (this.id > 1) {
+      this.router.navigate(['/details', this.id - 1]);
+    }
+  }
+
+  navegarProximo(): void {
+    if (this.id < 1025) {
+      this.router.navigate(['/details', this.id + 1]);
     }
   }
 
