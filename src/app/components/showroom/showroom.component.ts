@@ -106,6 +106,7 @@ export class ShowroomComponent implements OnInit {
     this.mostrarShine = !this.mostrarShine;
   }
 
+
   formatPokemonId(id: number): string {
     return id.toString().padStart(4, '0');
   }
