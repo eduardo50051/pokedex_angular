@@ -1,23 +1,10 @@
+<app-header></app-header>
 
-<app-header>
 
-</app-header>
 <div class="conteudo_tela">
 
 
-    <div class="topo_home">
-        
-        <p>
-            tela-inicial
-        </p>
-
-        <div class="botao_sair" (click)="Sair()">
-            <p>
-                 Sair
-            </p>
-        </div>
-
-    </div>
+   
 
 
 
@@ -26,22 +13,22 @@
 
     <div class="conteudo_home_box">
     
-    <div class="passadores_geraçoes">
-        <button (click)="carregarPorIntervalo(0, 150)">I Geração</button>
-        <button (click)="carregarPorIntervalo(151, 250)">II Geração</button>
-        <button (click)="carregarPorIntervalo(251, 385)">III Geração</button>
-        <button (click)="carregarPorIntervalo(386, 492)">IV Geração</button>
-        <button (click)="carregarPorIntervalo(493, 648)">V Geração</button>
-        <button (click)="carregarPorIntervalo(649, 720)">VI Geração</button>
-        <button (click)="carregarPorIntervalo(721, 808)">VII Geração</button>
-        <button (click)="carregarPorIntervalo(809, 889)">VIII Geração</button>
-        <button (click)="carregarPorIntervalo(890, 1024)">IX Geração</button>
-    </div> 
+     
        
 
                 <div class="lista_geracao">
                
-               
+                   
+
+                    
+                    <div class="navegacao">
+                        <button (click)="carregarPaginaAnterior()" [disabled]="start === 0">Anterior</button>
+                        <button 
+  (click)="carregarProximaPagina()" 
+  [disabled]="end >= totalPokemons">Próximo
+</button>
+                      </div>
+                      
                    
                 <div class="pokemons-container">
                
@@ -73,3 +60,4 @@
 </div>
 
 
+<app-footer></app-footer>

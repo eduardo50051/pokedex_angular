@@ -6,14 +6,53 @@
   
 
 
-<nav>
+  <nav>
+    
 
-<a routerLink="home">Primeira Gração</a>
-<a routerLink="tela2">tela2</a>
-<a routerLink="tela3">tela3</a>
-<a routerLink="tela4">tela4</a>
+    <div class="dropdown">
+      <a routerLink="/home" class="dropbtn">Inicio</a>
+     
+    </div>
 
-</nav>
+
+
+      
+      <div class="dropdown">
+        <p class="dropbtn">Geraçoes</p>
+        <div class="dropdown-content">
+          <a routerLink="/geracao/1">I Geração</a>
+          <a routerLink="/tela3">II Geração</a>
+          <a routerLink="/tela4">III Geração</a>
+          <a routerLink="/tela2">IV Geração</a>
+          <a routerLink="/tela3">V Geração</a>
+          <a routerLink="/tela4">VI Geração</a>
+          <a routerLink="/tela3">VII Geração</a>
+          <a routerLink="/tela4">VIII Geração</a>
+
+
+
+
+
+        </div>
+      </div>
+   
+
+      <div class="dropdown">
+        <a routerLink="/home" class="dropbtn">Buscar</a>
+      </div>
+
+
+      <div class="botao_sair" (click)="Sair()">
+        <p>
+             Sair
+        </p>
+    </div>
+  
+   
+    
+   
+  </nav>
+  
 
 
   </header>

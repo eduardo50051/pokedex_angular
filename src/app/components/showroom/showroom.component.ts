@@ -113,7 +113,7 @@ export class ShowroomComponent implements OnInit {
 
   getDescricaoEmIngles(): string {
     const descricaoEmIngles = this.descricaoPokemon?.flavor_text_entries.find((entry: any) => entry.language.name === 'en');
-    return descricaoEmIngles ? descricaoEmIngles.flavor_text : 'Descrição não disponível em inglês';
+    return descricaoEmIngles ? descricaoEmIngles.flavor_text : 'Descrição não disponível';
   }
 
 }

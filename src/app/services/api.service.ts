@@ -15,31 +15,39 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  
-  getPokemonsgeral(start: number = 0, end: number = 1024): Observable<any> {
-   
+  getPokemonsgeral(start: number, end: number): Observable<any> {
     const offset = start;
     const limit = end - start + 1; 
-    
+  
     const params = new HttpParams()
       .set('offset', offset.toString())
       .set('limit', limit.toString());
   
     return this.http.get(this.baseUrl, { params }).pipe(
       switchMap((data: any) => {
-        const pokemonDetailsRequests = data.results.map((pokemon: any) => 
+        const pokemonDetailsRequests = data.results.map((pokemon: any) =>
           this.getPokemonImages_home(pokemon.url).pipe(
             map((details: any) => ({
               name: pokemon.name,
-              image: details.sprites.front_default, 
-              url: pokemon.url
+              image: details.sprites.front_default,
+              url: pokemon.url,
             }))
           )
         );
-        return forkJoin(pokemonDetailsRequests);
+        return forkJoin(pokemonDetailsRequests).pipe(
+          map((pokemons) => ({
+            pokemons,
+            count: data.count,
+            next: data.next,
+            previous: data.previous,
+          }))
+        );
       })
     );
   }
+  
+  
+  
   
   
 

@@ -8,23 +8,12 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  header_footer = true; 
+  
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-    
-      .subscribe(() => {
-        let currentRoute = this.activatedRoute.firstChild;
-        while (currentRoute?.firstChild) {
-          currentRoute = currentRoute.firstChild;
-        }
-
-        
-        this.header_footer = currentRoute?.snapshot?.data?.['header_footer'] ?? true;
-      });
+   
   }
 }

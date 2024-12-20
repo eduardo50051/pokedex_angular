@@ -10,17 +10,16 @@ import { ApiService } from 'src/app/services/api.service';
 export class TelaInicialComponent implements OnInit {
   pokemons: any[] = []; 
   start: number = 0;   
-  end: number = 19; 
+  end: number = 23; 
   limit: number = 30;
+  totalPokemons: number = 0; 
   
   constructor(private router: Router, private apiService: ApiService) {}
 
   ngOnInit(): void {
     this.carregarPokemons();
-    this.apiService.getPokemonsgeral().subscribe((data) => {
-      this.pokemons = data;
-    });
   }
+  
 
   Sair(): void {
     localStorage.removeItem('estalogado');
@@ -30,37 +29,47 @@ export class TelaInicialComponent implements OnInit {
   carregarPokemons(): void {
     this.apiService.getPokemonsgeral(this.start, this.end).subscribe(
       (response) => {
-        this.pokemons = response; 
-        console.log(this.pokemons); 
+        this.pokemons = response.pokemons;
+        this.totalPokemons = response.count; 
       },
       (error) => {
         console.error('Erro ao carregar Pokémon:', error); 
       }
     );
   }
+  
 
 
+
+  get paginaAtual(): number {
+    return Math.floor(this.start / 20) + 1;
+  }
+  
  
+
+  
+
+  
+
   carregarPorIntervalo(start: number, end: number): void {
     this.start = start;
     this.end = end;
-    this.carregarPokemons();  
+    this.carregarPokemons();
   }
+  
 
   
   carregarProximaPagina(): void {
-    this.start += 100;
-    this.end += 100;
-    this.carregarPokemons();
+    this.start += 24; 
+    this.end = this.start + 23; 
+    this.carregarPokemons(); 
   }
-
-
+  
   carregarPaginaAnterior(): void {
-    this.start = Math.max(0, this.start - 100);  
-    this.end = this.start + 100;
-    this.carregarPokemons();
+    this.start = Math.max(0, this.start - 24);
+    this.end = this.start + 23; 
+    this.carregarPokemons(); 
   }
-
 
 
   navegarParaDetalhes(url: string): void {

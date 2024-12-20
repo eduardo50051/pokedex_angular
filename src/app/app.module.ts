@@ -14,6 +14,7 @@ import { TelaTerceareaComponent } from './components/tela-tercearea/tela-tercear
 import { TelaQuartenareaComponent } from './components/tela-quartenarea/tela-quartenarea.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShowroomComponent } from './components/showroom/showroom.component';
+import { GeracaoComponent } from './components/geracao/geracao.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ShowroomComponent } from './components/showroom/showroom.component';
     TelaTerceareaComponent,
     TelaQuartenareaComponent,
     LoginComponent,
-    ShowroomComponent
+    ShowroomComponent,
+    GeracaoComponent
   ],
   imports: [
     BrowserModule,
