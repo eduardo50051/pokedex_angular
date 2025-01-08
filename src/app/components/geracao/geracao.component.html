@@ -1,4 +1,3 @@
-<app-header></app-header>
 
 
 
@@ -12,6 +11,45 @@
 
 
 
+    <div class="conteudo_home_box">
+    
+     
+       
+
+                <div class="lista_geracao">
+               
+                   
+
+                    
+                    <div class="navegacao">
+                       
+                        <input type="text" placeholder="buscar">
+ 
+                      </div>
+                      
+                   
+                <div class="pokemons-container">
+               
+               
+                    <div *ngFor="let pokemon of pokemons" class="pokemon-card" (click)="navegarParaDetalhes(pokemon.url)">
+                    <div class="pokemon-image">
+                        <img [src]="pokemon.image" alt="{{ pokemon.name }}" />
+                    </div>
+                    
+                
+
+                    <div class="pokemon-name">
+                        <span>{{ pokemon.name }}</span>
+                    </div>
+                    </div>
+               
+                          </div>
+               
+                        </div>
+            
+    
+    
+    </div>
       
   
  
@@ -20,6 +58,3 @@
 </div>
 
 
-
-
-<app-footer></app-footer>

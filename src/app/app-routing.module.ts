@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './auth.guard';
 import { ShowroomComponent } from './components/showroom/showroom.component';
 import { GeracaoComponent } from './components/geracao/geracao.component';
+import { BuscarComponent } from './components/buscar/buscar.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'tela4', component:TelaQuartenareaComponent, canActivate: [authGuard] },
   { path: 'details/:id', component:ShowroomComponent, canActivate: [authGuard] },
   { path: 'geracao/:id', component:GeracaoComponent, canActivate: [authGuard] },
+  { path: 'buscar', component:BuscarComponent, canActivate: [authGuard]},
   { path: '**', redirectTo: 'login' },
   
   
