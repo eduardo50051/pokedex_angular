@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-showroom',
@@ -17,7 +19,8 @@ export class ShowroomComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -30,6 +33,10 @@ export class ShowroomComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = +params['id']; 
     });
+  }
+
+  voltar(){
+    this.location.back();
   }
 
 

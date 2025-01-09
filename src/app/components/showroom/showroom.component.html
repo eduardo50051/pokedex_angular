@@ -1,17 +1,16 @@
-
-<div class="passador">
-
+<app-header></app-header>
 
 
+
+<div *ngIf="id <= 1025" class="passador">
   <button (click)="navegarAnterior()" [disabled]="id <= 1">Anterior</button>
   <button (click)="navegarProximo()" [disabled]="id >= 1025">Próximo</button>
-
-
 </div>
+
 
 <div class="content_showroom_ajuste">
   
-  <div class="botao_voltar_showroom" routerLink="/home">
+  <div class="botao_voltar_showroom" (click)="voltar()">
     Voltar
  </div>
 
@@ -129,6 +128,8 @@
     </div>
   </div>
 
+
+  <app-footer></app-footer>
 
 
 
