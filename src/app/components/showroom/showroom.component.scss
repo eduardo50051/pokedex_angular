@@ -410,6 +410,73 @@ display: flex;
 }
 
 
+/* Versão normal do botão */
+.btn-normal {
+  padding: 8px 16px;
+  background-color: #007bff; /* Azul padrão */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-normal:hover {
+  background-color: #0056b3; /* Azul escuro */
+}
+
+/* Versão "Shiny" - mais brilhante ou com uma cor diferente */
+.btn-shiny {
+  padding: 8px 16px;
+  background-color: #FFD700; /* Amarelo dourado */
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-shiny:hover {
+  background-color: #FFC107; /* Amarelo mais escuro */
+}
+
+/* Versão "Mega" - pode ser estilizada com efeitos específicos */
+.btn-mega {
+  padding: 8px 16px;
+  background-color: #28a745; /* Verde escuro */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mega:hover {
+  background-color: #218838; /* Verde mais escuro */
+}
+
+/* Versão "Gigantamax" - com um azul vibrante */
+.btn-gigantamax {
+  padding: 8px 16px;
+  background-color: #007BFF; /* Azul padrão */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gigantamax:hover {
+  background-color: #0056b3; /* Azul escuro */
+}
+
+
+
+
 .type-shine {background-color: #F08030;}
 .type-male {background-color: #1e90ff; }
 .type-female {background-color: #ff69b4; }

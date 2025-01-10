@@ -13,6 +13,10 @@ export class ShowroomComponent implements OnInit {
   DetalhesPokemon: any;
   descricaoPokemon: any;
   mostrarShine: boolean = false;
+  mostrarMega: boolean = false;
+  mostrarMegaX: boolean = false;
+  mostrarMegaY: boolean = false;
+  mostrarGigantamax: boolean = false;
   id!: number;
 
 
@@ -120,7 +124,7 @@ export class ShowroomComponent implements OnInit {
 
   getDescricaoEmIngles(): string {
     const descricaoEmIngles = this.descricaoPokemon?.flavor_text_entries.find((entry: any) => entry.language.name === 'en');
-    return descricaoEmIngles ? descricaoEmIngles.flavor_text : 'Descrição não disponível';
+    return descricaoEmIngles ? descricaoEmIngles.flavor_text : '';
   }
 
 }

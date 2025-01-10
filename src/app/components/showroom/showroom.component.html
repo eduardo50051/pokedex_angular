@@ -98,19 +98,29 @@
 
                 <div class="passadores_pokemons">
                 
-                    <div (click)="botaoShineMostrar()" class="passador_unidade type-shine">
-                            <p>Ver Shiny</p>
-                          </div>
+                    <div (click)="botaoShineMostrar()" class="passador_unidade btn-shiny">
+                            <p>Shiny</p>
+                    </div>
                          
+
+                    <div  class="passador_unidade btn-mega">
+                          <p>Mega</p>
+                    </div>
+
+
+                    <div  class="passador_unidade btn-gigantamax">
+                             <p>G-Max</p>
+                    </div>
+
                        
                         </div>
 
-  
-<div class="texto_desc_pokemons">
-<p>
-    {{ getDescricaoEmIngles() }}
-</p>
-</div>
+                        <div *ngIf="getDescricaoEmIngles()" class="texto_desc_pokemons">
+                          <p>
+                              {{ getDescricaoEmIngles() }}
+                          </p>
+                      </div>
+                      
 
   
               

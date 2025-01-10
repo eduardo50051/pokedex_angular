@@ -1,72 +1,50 @@
 <app-header></app-header>
 
-
 <div class="buscar_pokemons">
-    <input type="text" [(ngModel)]="searchTerm" (keyup)="pesquisarPokemons()" placeholder="Pesquisar Pokémon">
-    <button (click)="resetFilter()">Limpar</button>
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="pesquisarPokemons()"
+    placeholder="Pesquisar Pokémon"
+  />
+  <button (click)="resetFilter()">Limpar</button>
 </div>
-  
-
-
-
 
 <div class="conteudo_tela">
 
-
   
 
+  <div *ngIf="isLoading" class="loading">
+    <p>Carregando Pokémons...</p>
+    <img src="../../../assets/images/loading.gif">
+  </div>
 
 
+  <div *ngIf="!isLoading && noResults" class="no-results">
+    <p>Nenhum Pokémon encontrado.</p>
+  </div>
 
 
-
-    <div class="conteudo_home_box">
-    
-     
-       
-
-                <div class="lista_geracao">
-               
-                   
-                    <div class="pokemons-container">
-                        <ng-container *ngFor="let pokemon of pokemons">
-                          <div
-                            class="pokemon-card"
-                            *ngIf="pokemon.image && pokemon.name"
-                            (click)="navegarParaDetalhes(pokemon.url)"
-                          >
-                            <div class="pokemon-image">
-                              <img [src]="pokemon.image" alt="{{ pokemon.name }}" />
-                            </div>
-                            <div class="pokemon-name">
-                              <span>{{ pokemon.name }}</span>
-                            </div>
-                          </div>
-                        </ng-container>
-                      </div>
-                      
-                      
-                      
-                      
-                      
-                     
-                      
-                      
-                      
-                      
-                      
-                      
-                        </div>
-            
-    
-    
+  <div *ngIf="!isLoading && !noResults" class="conteudo_home_box">
+    <div class="lista_geracao">
+      <div class="pokemons-container">
+        <ng-container *ngFor="let pokemon of pokemons">
+          <div
+            class="pokemon-card"
+            *ngIf="pokemon.image && pokemon.name"
+            (click)="navegarParaDetalhes(pokemon.url)"
+          >
+            <div class="pokemon-image">
+              <img [src]="pokemon.image" alt="{{ pokemon.name }}" />
+            </div>
+            <div class="pokemon-name">
+              <span>{{ pokemon.name }}</span>
+            </div>
+          </div>
+        </ng-container>
+      </div>
     </div>
-      
-  
- 
-  
-
+  </div>
 </div>
-
 
 <app-footer></app-footer>
