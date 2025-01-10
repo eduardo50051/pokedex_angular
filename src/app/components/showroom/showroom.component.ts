@@ -78,6 +78,9 @@ export class ShowroomComponent implements OnInit {
         this.descricaoPokemon = response;
         console.log('Descrição do Pokémon:', this.descricaoPokemon);
   
+
+
+        
         const descricaoEmIngles = this.descricaoPokemon.flavor_text_entries.find((entry: any) => entry.language.name === 'en');
         if (descricaoEmIngles) {
           let descricao = descricaoEmIngles.flavor_text;
@@ -89,10 +92,19 @@ export class ShowroomComponent implements OnInit {
           console.log('Descrição não encontrada em inglês');
         }
       },
+
+
+      
       (error) => {
         console.error('Erro ao carregar descrição do Pokémon:', error);
       }
     );
+
+
+
+  
+  
+
   }
   
 

@@ -58,9 +58,14 @@
   
       </div>
   
+
+      
       
       <div class="pokemon-details_box">
       
+
+        <div class="ajuste_flex_pokemon_details">
+        
         <div class="box_details_texto">
       
                 <h2 class="details-title">Detalhes</h2>
@@ -83,6 +88,10 @@
             
             </div>
     
+
+
+
+            
             <div class="div_details_imagem">
             
               <div class="imagem_poke_animada_box">
@@ -96,24 +105,7 @@
   
 
 
-                <div class="passadores_pokemons">
-                
-                    <div (click)="botaoShineMostrar()" class="passador_unidade btn-shiny">
-                            <p>Shiny</p>
-                    </div>
-                         
-
-                    <div  class="passador_unidade btn-mega">
-                          <p>Mega</p>
-                    </div>
-
-
-                    <div  class="passador_unidade btn-gigantamax">
-                             <p>G-Max</p>
-                    </div>
-
-                       
-                        </div>
+              
 
                         <div *ngIf="getDescricaoEmIngles()" class="texto_desc_pokemons">
                           <p>
@@ -129,15 +121,44 @@
               
     
 
-
+          </div>
 
     
+          <div class="passadores_pokemons">
+                
+            <div (click)="botaoShineMostrar()" class="shine_button">
+                    <p>Shiny</p>
+            </div>
+                 
+        
+            <div class="box_variedades" *ngIf="descricaoPokemon.varieties && descricaoPokemon.varieties.length > 1">
+              <div class="passador_unidade btn-shiny" *ngFor="let variety of descricaoPokemon.varieties">
+                <p>{{ variety.pokemon.name }}</p>
+              </div>
+            </div>
+            
+               
+                </div>
+
     
     </div>
   
-    </div>
-  </div>
 
+
+
+
+
+
+    </div>
+
+
+
+    
+  </div>
+ 
+ 
+ 
+  
 
   <app-footer></app-footer>
 
